@@ -13,7 +13,7 @@ section.module.parallax{
 
 /* ===== Imagen concreta del parallax ===== */
 section.module.parallax-1{
-  background-image: url("../img/torre-cuscatlan.png");
+  background-image: url("../img/torre-cuscatlan.jpg");
 }
 
 /* ===== Tipografías dentro del parallax =====
@@ -75,7 +75,7 @@ section.module.parallax::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #2a2f8066; /* negro con 50% opacidad */
+  background: #2a2f8066; /* azul con opacidad */
   z-index: 1;            /* queda debajo del texto */
 }
 
@@ -147,6 +147,7 @@ section.module.parallax .container {
   display: block;
   font-size: 64px;
   line-height: 1;
+  font-family: "Oswald", sans-serif;
   font-weight: 800;
 }
 
@@ -156,7 +157,8 @@ section.module.parallax .container {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.08em;
-  font-size: 14px;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
 }
 
 /* Bloque de texto derecho */
@@ -170,10 +172,11 @@ section.module.parallax .container {
 }
 
 .home-about__title {
-  color: var(--c-title);
+  color: var(--c-primary);
   font-size: 32px;
   line-height: 1.2;
   margin-bottom: 14px;
+  text-transform: uppercase;
 }
 
 .home-about__intro {
@@ -196,9 +199,10 @@ section.module.parallax .container {
 .home-about__services li {
   display: flex;
   align-items: baseline;
+  font-family: "Oswald", sans-serif;
   font-weight: 600;
-  color: var(--c-title);
-  font-size: 14px;
+  color: var(--c-primary);
+  font-size: 18px;
 }
 
 /* Punto destacado con el color de acento */
@@ -241,76 +245,84 @@ section.module.parallax .container {
   }
 }
 
+
+
 /* =========================================================
-   BLOQUE: PROYECTOS DESTACADOS EN HOME
+   BLOQUE: NOSOTROS EN HOME
    ========================================================= */
-.home-projects-preview {
-  padding: 80px 0;
-  background: #fff;
+.home-about-alt {
+  background: #f9fafb;
+  margin: 75px 0 75px;
 }
 
-.home-projects-title {
-  text-align: center;
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--c-primary);
-  margin-bottom: 40px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Cuadrícula principal */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2px;
-  max-width: var(--maxw);
-  margin: 0 auto;
-}
-
-/* Cada proyecto */
-.project-item {
-  position: relative;
-  overflow: hidden;
-  display: block;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.project-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform .5s ease;
-}
-
-/* Efecto overlay */
-.project-item .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(42, 47, 128, 0.85); /* color base con transparencia */
-  color: #fff;
+.home-about-alt__wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  font-weight: 600;
-  opacity: 0;
-  transition: opacity .4s ease, transform .4s ease;
+  justify-content: space-between;
+  gap: 40px;
 }
 
-/* Hover animado */
-.project-item:hover img {
-  transform: scale(1.05);
+.home-about-alt__content {
+  flex: 1;
+  max-width: 600px;
+  padding-left: 7%;
 }
-.project-item:hover .overlay {
-  opacity: 1;
-  transform: translateY(0);
+
+.home-about-alt__subtitle {
+  color: var(--c-accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.home-about-alt__title {
+  color: var(--c-primary);
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.home-about-alt__list {
+  margin: 20px 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.home-about-alt__list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 10px;
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--c-primary);
+}
+
+.home-about-alt__list li::before {
+  content: "✔";
+  color: var(--c-accent);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.home-about-alt__image img {
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  max-height: 550px;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+@media (max-width: 960px) {
+  .home-about-alt__wrapper {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .home-about-alt__image img {
+    max-width: 100%;
   }
 }

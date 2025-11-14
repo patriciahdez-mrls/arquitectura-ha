@@ -1,0 +1,285 @@
+/* =========================================================
+   PÁGINA SERVICIOS
+   ========================================================= */
+
+/* ========== 1. HERO SERVICIOS ========== */
+
+.services-hero {
+  background: linear-gradient(#2a2f8066, #2a2f8066),
+              url("../img/img-servicios/servicios-hero.jpg") center/cover no-repeat;
+  color: var(--c-text-clear);
+  text-align: center;
+  padding: 100px 0 100px;
+  margin-top: 30px;
+}
+
+.services-hero__eyebrow {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: var(--c-text-clear);
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-shadow: 0 0 10px #2a2f80d9;
+}
+
+.services-hero__title {
+  font-size: 32px;
+  line-height: 1.2;
+  color: var(--c-text-clear);
+  margin-bottom: 14px;
+  text-shadow: 0 0 10px #2a2f80d9;
+}
+
+.services-hero__text {
+  max-width: 720px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 auto;
+  color: var(--c-text-clear);
+  text-align: center;
+  text-shadow: 0 0 10px #2a2f80d9;
+}
+
+/* Responsive hero */
+@media (max-width: 768px) {
+  .services-hero {
+    padding: 40px 0 28px;
+  }
+
+  .services-hero__title {
+    font-size: 26px;
+  }
+
+  .services-hero__text {
+    font-size: 16px;
+  }
+}
+
+/* =========================================================
+   2. BLOQUE PRINCIPAL DE SERVICIOS
+   ========================================================= */
+
+.services-main {
+  background: #f9fafb;
+  padding: 60px 0 40px;
+}
+
+.services-main__wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Columna izquierda */
+.services-main__eyebrow {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: var(--c-accent);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.services-main__intro {
+  padding-top: 50px;
+}
+
+.services-main__title {
+  font-size: 32px;
+  line-height: 1.2;
+  color: var(--c-primary);
+  margin-bottom: 16px;
+}
+
+.services-main__text {
+  font-size: 15px;
+  color: var(--c-text);
+  margin-bottom: 14px;
+  max-width: 40rem;
+}
+
+/* Responsive layout general */
+@media (max-width: 960px) {
+  .services-main__wrapper {
+    grid-template-columns: 1fr;
+  }
+  .services-main__title {
+    font-size: 26px;
+  }
+}
+
+/* ------ Columna derecha: slider como ventana/carrusel ------ */
+.services-slider {
+  background: #f3f6ff;
+  padding: 24px 20px 52px;
+  max-width: 560px;
+  width: 100%;
+  margin-left: auto;
+  position: relative;
+}
+
+/* Ventana */
+.services-slider__viewport {
+  overflow: hidden;
+}
+
+/* Cinta transportadora */
+.services-slider__track {
+  display: flex;
+  will-change: transform;
+  transform: translate3d(0,0,0);
+}
+
+/* Cada tarjeta ocupa 50% en escritorio (2 visibles), 100% en móvil */
+.service-slide {
+  flex: 0 0 50%;
+  box-sizing: border-box;
+  padding: 20px 18px 22px;
+  background: #f9fbff;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+  min-height: 210px;
+}
+
+/* Icono */
+.service-slide__icon {
+  width: 70px;
+  height: 64px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-slide__icon svg {
+  width: 50px;
+  height: 50px;
+  fill: var(--c-accent);
+}
+
+/* Título y texto */
+.service-slide__title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--c-primary);
+}
+
+.service-slide__text {
+  font-size: 15px;
+  color: var(--c-text);
+  margin-bottom: 16px;
+}
+
+.service-slide__link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--c-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.service-slide__link:hover,
+.service-slide__link:focus-visible {
+  color: var(--c-primary);
+}
+
+/* Controles */
+.services-slider__controls {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  display: inline-flex;
+  gap: 5px;
+  z-index: 5;
+}
+
+.services-slider__btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  border: 1px solid rgba(42,47,128,.2);
+  background: #fff;
+  color: var(--c-primary);
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease, transform .15s ease;
+}
+
+.services-slider__btn:hover,
+.services-slider__btn:focus-visible {
+  background: var(--c-accent);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+
+/* ==== Responsive ==== */
+/* Pequeños ajustes de texto en pantallas pequeñas */
+@media (max-width: 768px) {
+  .services-main {
+    padding: 40px 0 32px;
+  }
+
+  .services-main__title {
+    font-size: 26px;
+  }
+
+  .service-slide__title {
+    font-size: 17px;
+  }
+
+  .service-slide__text {
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+   3. CTA FINAL SERVICIOS
+   ========================================================= */
+
+.services-cta {
+  background: #f3f6ff;          /* azul muy suave */
+  padding: 36px 0;
+  margin: 40px 0 10px;
+  text-align: center;
+}
+
+.services-cta__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.services-cta__title {
+  font-size: 24px;
+  color: var(--c-primary);
+  margin-bottom: 8px;
+}
+
+.services-cta__intro {
+  font-size: 15px;
+  color: var(--c-text);
+  max-width: 600px;
+}
+
+.services-cta__action {
+  margin-top: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-cta {
+    padding: 28px 0;
+    margin: 32px 0 0;
+  }
+
+  .services-cta__title {
+    font-size: 20px;
+  }
+}
+

@@ -1,0 +1,312 @@
+/* =========================================================
+   PÁGINA NOSOTROS
+   ========================================================= */
+
+/* ========== 1. HERO / INTRO SUPERIOR ========== */
+
+.about-hero {
+  background: linear-gradient(#2a2f8066, #2a2f8066),
+              url("../img/img-nosotros/nosotros-hero.jpg") center/cover no-repeat;
+  color: var(--c-text-clear);
+  text-align: center;
+  padding: 100px 0 100px;
+  margin-top: 30px;
+}
+
+.about-hero__eyebrow {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: var(--c-text-clear);
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-shadow: 0 0 10px #2a2f80d9;
+}
+
+.about-hero__title {
+  font-size: 32px;
+  line-height: 1.2;
+  color: var(--c-text-clear);
+  margin-bottom: 14px;
+  text-shadow: 0 0 10px #2a2f80d9;
+}
+
+.about-hero__text {
+  max-width: 720px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 auto;
+  color: var(--c-text-clear);
+  text-align: center;
+  text-shadow: 0 0 10px #2a2f80d9;
+}
+
+/* Responsive hero */
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 40px 0 28px;
+  }
+
+  .about-hero__title {
+    font-size: 26px;
+  }
+}
+
+/* ========== 2. HISTORIA / QUIÉNES SOMOS ========== */
+
+.about-story {
+  background: #ffffff;
+  padding: 60px 0;
+}
+
+.about-story__wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.about-story__text h2 {
+  color: var(--c-primary);
+  text-transform: uppercase;
+  font-size: 28px;
+  margin: 16px 0;
+}
+
+.about-story__text p {
+  font-size: 15px;
+  color: var(--c-text);
+  margin-bottom: 14px;
+}
+
+.about-story__highlight {
+  background: #f9fafb;
+  border-left: 4px solid var(--c-accent);
+  padding: 20px 20px 18px;
+}
+
+.about-story__highlight h3 {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: var(--c-primary);
+}
+
+.about-story__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about-story__list li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 14px;
+  color: var(--c-text);
+  margin-bottom: 8px;
+}
+
+.about-story__list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--c-accent);
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Responsive historia */
+@media (max-width: 900px) {
+  .about-story__wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========== 3. MISION Y VISION ========== */
+
+.about-focus {
+  position: relative;
+  background: #f9fafb;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.about-focus::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../img/img-nosotros/fondo-planos.jpg") center/cover no-repeat;
+    opacity: 0.08; /*transparencia del fondo*/
+    z-index: 0; /*está por debajo del contenido*/
+}
+
+/* Asegura que todo el contenido quede encima */
+.about-focus .container,
+.about-focus_item {
+  position: relative;
+  z-index: 1;
+  background: transparent; /* importante: evita que el fondo se “tinte” */
+}
+
+.about-focus h2 {
+  text-align: center;
+  color: var(--c-primary);
+  text-transform: uppercase;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.about-focus_intro {
+  max-width: 720px;
+  font-weight: 600;
+  margin: 0 auto 32px;
+  text-align: center;
+  font-size: 15px;
+  color: var(--c-text);
+}
+
+.about-focus_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.about-focus_item {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  padding: 18px 18px 16px;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
+}
+
+.about-focus_item h3 {
+  font-size: 18px;
+  color: var(--c-primary);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.about-focus_item p {
+  font-size: 14px;
+  color: var(--c-text);
+}
+
+/* Responsive focus */
+@media (max-width: 768px) {
+  .about-focus_grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========== 4. CÓMO TRABAJAMOS / PROCESO ========== */
+
+.about-process {
+  background: #fff;
+  padding: 60px 0;
+}
+
+.about-process__wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(260px, 1fr);
+  gap: 32px;
+  align-items: stretch; /* hace que texto y vídeo tengan el mismo alto de fila */
+}
+
+/* Columna de texto */
+.about-process__content h2 {
+  text-align: left;
+  color: var(--c-primary);
+  text-transform: uppercase;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.about-process__intro {
+  max-width: 640px;
+  font-size: 15px;
+  color: var(--c-text);
+  margin-bottom: 22px;
+}
+
+.about-process__steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.about-process__steps li {
+  padding: 12px 14px;
+  border-left: 2px solid var(--c-accent);
+  background: #ffffff;
+}
+
+.about-process__steps h3 {
+  font-size: 16px;
+  color: var(--c-primary);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.about-process__steps p {
+  font-size: 14px;
+  color: var(--c-text);
+}
+
+/* Columna de vídeo */
+.about-process__video {
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.about-process__video-media {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover; /* llena el contenedor sin deformarse demasiado */
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-process__wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .about-process__video {
+    order: -1;        /* vídeo arriba en móvil, texto debajo (si lo prefieres) */
+    max-height: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-process {
+    padding: 40px 0;
+  }
+
+  .about-process__content h2 {
+    font-size: 24px;
+  }
+}
+
+/* ========== 5. CTA FINAL ========== */
+
+.about-cta {
+  background: var(--c-primary);
+  color: #ffffff;
+  padding: 48px 0 56px;
+  text-align: center;
+}
+
+.about-cta h2 {
+  color: #ffffff;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.about-cta p {
+  max-width: 640px;
+  margin: 0 auto 20px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.92);
+}

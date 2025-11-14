@@ -5,6 +5,12 @@
   <meta name="description" content="Plantilla base del sitio ArquitecturaHA. Páginas internas con diseño profesional y navegación coherente.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proyectos | ArquitecturaHA</title>
+  <link rel="canonical">
+
+  <!-- Font-family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 
   <!-- CSS global -->
   <link rel="stylesheet" href="assets/css/base.css">
@@ -62,7 +68,8 @@
             <li><a href="m-proyectos/mobiliario.html">Mobiliario a medida</a></li>
           </ul>
         </li>
-        <li><a href="blog.html">Blog</a></li>
+        <!--<li><a href="blog.html">Blog</a></li>-->
+        <li><a href="404.html">Blog</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
@@ -72,49 +79,68 @@
 
   <!-- ================= MAIN ================= -->
   <main class="main-content">
+
+  <!-- Intro de proyectos -->
+  <section class="projects-intro">
     <div class="container">
-      <h1>Nuestros Proyectos</h1>
-      <p>Aquí encontrarás todo lo que hemos realizado en nuestra trayectoria.</p>
-    
-    <section class="project-grid" aria-label="Tipos de proyectos">
-      <article class="project-item">
-        <a href="proyectos/residenciales.html">
-          <img src="assets/img/img-proyectos/residenciales-1.jpg" alt="Proyectos residenciales">
-          <div class="project-overlay">
-            <h2>Residenciales</h2>
-          </div>
-        </a>
-      </article>
+      <h2 class="projects-title">Proyectos</h2>
 
-      <article class="project-item">
-        <a href="proyectos/comerciales.html">
-          <img src="assets/img/img-proyectos/comerciales-1.jpg" alt="Proyectos comerciales">
-          <div class="project-overlay">
-            <h2>Comerciales</h2>
-          </div>
-        </a>
-      </article>
+      <p class="project">
+        En esta sección podrás conocer la variedad de trabajos realizados por nuestro estudio, donde la innovación y la experiencia se reflejan en cada detalle. Desarrollamos proyectos para particulares y empresas, abarcando desde viviendas residenciales hasta espacios industriales y mobiliario a medida.
+      </p>
 
-      <article class="project-item">
-        <a href="proyectos/industriales.html">
-          <img src="assets/img/img-proyectos/industriales-1.jpg" alt="Proyectos industriales">
-          <div class="project-overlay">
-            <h2>Industriales</h2>
-          </div>
-        </a>
-      </article>
-
-      <article class="project-item">
-        <a href="proyectos/muebles.html">
-          <img src="assets/img/img-proyectos/muebles-1.jpg" alt="Mobiliario a medida">
-          <div class="project-overlay">
-            <h2>Mobiliario a medida</h2>
-          </div>
-        </a>
-      </article>
-    </section>
+      <p class="project">
+        Cada proyecto es un compromiso con la excelencia: un equilibrio entre diseño, técnica y sostenibilidad para transformar ideas en espacios funcionales y con identidad propia. 
+        <strong>Explora nuestros proyectos destacados.</strong>
+      </p>
     </div>
-  </main>
+  </section>
+
+  <!-- Grid de tipos de proyectos -->
+  <section class="projects-grid-section" aria-label="Tipos de proyectos">
+    <div class="container">
+      <div class="project-grid">
+        <article class="project-item">
+          <a href="m-proyectos/residenciales.html">
+            <img src="assets/img/img-proyectos/residenciales-1.jpg" alt="Proyectos residenciales">
+            <div class="project-overlay">
+              <h3>Residenciales</h3>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-item">
+          <a href="m-proyectos/comerciales.html">
+            <img src="assets/img/img-proyectos/comerciales-1.jpg" alt="Proyectos comerciales">
+            <div class="project-overlay">
+              <h3>Comerciales</h3>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-item">
+          <a href="m-proyectos/industriales.html">
+            <img src="assets/img/img-proyectos/industriales-1.jpg" alt="Proyectos industriales">
+            <div class="project-overlay">
+              <h3>Industriales</h3>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-item">
+          <a href="m-proyectos/mobiliario.html">
+            <img src="assets/img/img-proyectos/muebles-1.jpg" alt="Mobiliario a medida">
+            <div class="project-overlay">
+              <h3>Mobiliario a medida</h3>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
   <!-- =============== /MAIN =============== -->
 
 
@@ -137,19 +163,20 @@
 
       <div class="footer-col">
         <h3>Enlaces rápidos</h3>
-        <ul class="link-list">
+        <ul class="link-list" aria-label="Enlaces rápidos">
           <li><a href="index.html">Inicio</a></li>
           <li><a href="nosotros.html">Sobre nosotros</a></li>
           <li><a href="servicios.html">Servicios</a></li>
           <li><a href="proyectos.html">Proyectos</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <!--<li><a href="blog.html">Blog</a></li>-->
+          <li><a href="404.html">Blog</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h3>Enlaces populares</h3>
-        <ul class="link-list">
+        <ul class="link-list" aria-label="Enlaces populares">
           <li><a href="m-servicios/diseno-planificacion.html">Diseño y Planificación de proyectos</a></li>
           <li><a href="m-servicios/mantenimiento.html">Mantenimiento</a></li>
           <li><a href="m-proyectos/mobiliario.html">Mobiliario a medida</a></li>
