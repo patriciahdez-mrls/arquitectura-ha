@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://patriciahdez-mrls.github.io/arquitectura-ha/sitemap.xml
