@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 
+Disallow: /404.html
+
 Sitemap: https://patriciahdez-mrls.github.io/arquitectura-ha/sitemap.xml
